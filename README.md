@@ -2,9 +2,11 @@
 
 โปรแกรม Windows ออฟไลน์ อ่านสลิปทั้งโฟลเดอร์แล้วเพิ่มลง Excel เดิม ไม่ต้องกรอกครบหรือยืนยันทีละใบก่อนส่งออก
 
+ดาวน์โหลดโปรแกรมพร้อมใช้สำหรับ Windows 64-bit ได้ที่ [GitHub Releases](https://github.com/lnwpeaz/financial-report/releases/latest) เลือกไฟล์ **SlipToExcel-Windows-x64.zip** ไม่ต้องติดตั้ง Python หรือมี API key
+
 ## ใช้งานทุกวัน
 
-1. แตก `release/SlipToExcel-Windows-x64.zip` แล้วเปิด `SlipToExcel.exe`
+1. ดาวน์โหลด **SlipToExcel-Windows-x64.zip** จาก Releases แล้วแตก ZIP ทั้งหมดก่อนเปิด `SlipToExcel.exe`
 2. กด **เพิ่มรูปสลิป** หรือ **เพิ่มทั้งโฟลเดอร์** เลือกภาพจากที่ใดก็ได้ รวมโฟลเดอร์ย่อย
 3. โปรแกรมคัดลอกรูปเก็บใน `data/วันที่/รอบนำเข้า` อ่านและเพิ่มลง `report.xlsx` เดิมทันที
 4. รอ **บันทึกสำเร็จ** แล้วกด **เปิด Excel ของฉัน** วันถัดไปทำแบบเดิม ไม่ต้องลบรูปเก่า
@@ -56,6 +58,8 @@
 ## พัฒนาและสร้าง EXE
 
 ใช้ Windows x64 และ Python 3.13 ที่มีแพ็กเกจตาม requirements
+
+Repository เก็บโค้ด คู่มือ และชุดทดสอบ ส่วนรูปสลิป รายงาน Excel ข้อมูลแคช โมเดล และไฟล์ build ไม่รวมใน Git ใช้สคริปต์ bootstrap ด้านล่างเพื่อเตรียมโมเดลและ OCR runtime
 
 ```powershell
 py -3 -m venv .venv
